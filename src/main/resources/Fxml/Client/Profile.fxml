@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" style="-fx-padding: 20" styleClass="vbox" stylesheets="@../../Styles/Profile.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maviharshit.bankingsystem.Controllers.Client.ProfileController">
+<HBox alignment="CENTER" layoutX="14.0" prefHeight="50.0" prefWidth="810.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <Text fill="#888888" styleClass="text_up" text="Client Profile" wrappingWidth="127.42971801757812">
+         <font>
+            <Font size="22.0" />
+         </font></Text>
+</HBox>
+    <VBox layoutX="35.0" layoutY="59.0" prefHeight="672.0" prefWidth="810.0" styleClass="vbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+
+    <Text styleClass="text" text="Full Name:" />
+    <Label fx:id="fullName_lbl" />
+
+    <Text styleClass="text" text="Payee Address:" />
+    <Label fx:id="payeeAddress_lbl" />
+
+    <Text styleClass="text" text="Account Created:" />
+    <Label fx:id="accountCreated_lbl" />
+
+    <Text styleClass="text" text="Checking Account:" />
+    <Label fx:id="checkingAccNum_lbl" />
+
+    <Text styleClass="text" text="Checking Balance:" />
+    <Label fx:id="checkingBal_lbl" />
+
+    <Text styleClass="text" text="Saving Account:" />
+    <Label fx:id="savingAccNum_lbl" />
+
+    <Text styleClass="text" text="Saving Balance:" />
+    <Label fx:id="savingBal_lbl" />
+
+    <Text styleClass="text" text="Transaction Limit:" />
+    <Label fx:id="transactionLimit_lbl" />
+
+    <Text styleClass="text" text="Withdrawal Limit:" />
+    <Label fx:id="withdrawalLimit_lbl" />
+
+    <Text styleClass="text" text="Last Login:" />
+    <Label fx:id="lastLogin_lbl" />
+
+    <Button fx:id="updatePassword_btn" text="Update Password" />
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="account_view_container" stylesheets="@../../Styles/Accounts.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maviharshit.bankingsystem.Controllers.Client.AccountsController">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <VBox layoutX="14.0" layoutY="39.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number:" />
+            <Label fx:id="ch_acc_num" text="3452 4950" />
+            <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Limit:" />
+            <Label fx:id="transaction_limit" layoutX="10.0" layoutY="28.0" text="10,000.00" />
+            <Text layoutX="10.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created:" />
+            <Label fx:id="ch_account_date" layoutX="10.0" layoutY="63.0" text="2025-11-15" />
+            <Text layoutX="10.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:" />
+            <Label fx:id="ch_account_bal" layoutX="10.0" layoutY="98.0" text="₹3000.00" />
+         </children>
+      </VBox>
+      <Text layoutX="21.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="364.0" />
+      <VBox layoutX="14.0" layoutY="392.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="14.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number:" />
+            <Label fx:id="sv_acc_num" text="3452 4950" />
+            <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Withdrawal Limit:" />
+            <Label fx:id="withdrawal_limit" layoutX="10.0" layoutY="28.0" text="₹5000.00" />
+            <Text layoutX="10.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created:" />
+            <Label fx:id="sv_acc_date" layoutX="10.0" layoutY="63.0" text="2025-11-15" />
+            <Text layoutX="10.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:" />
+            <Label fx:id="sv_acc_bal" layoutX="10.0" layoutY="98.0" text="₹13000.00" />
+         </children>
+      </VBox>
+      <Text layoutX="520.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Funds To Savings Account:" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="38.0" />
+      <TextField fx:id="amount_to_sv" layoutX="441.0" layoutY="72.0" prefHeight="26.0" prefWidth="244.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="72.0" />
+       <Button fx:id="trans_to_sv_btn" layoutX="449.0" layoutY="122.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="244.0" text="Transfer" AnchorPane.rightAnchor="170.60000000000002" AnchorPane.topAnchor="122.0">
+           <graphic>
+               <FontAwesomeIconView fill="WHITE" glyphName="ARROW_DOWN" size="20" />
+           </graphic>
+       </Button>
+       <Text layoutX="441.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Funds To Checking Account:" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="364.0" />
+      <TextField fx:id="amount_to_ch" layoutX="441.0" layoutY="397.0" prefHeight="26.0" prefWidth="244.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="397.0" />
+      <Button fx:id="trans_to_ch_btn" layoutX="449.0" layoutY="444.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="244.0" text="Transfer" AnchorPane.rightAnchor="170.60000000000002" AnchorPane.topAnchor="444.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_UP" size="20" />
+         </graphic>
+      </Button>
+      <Label fx:id="transfer_lbl" layoutX="550.0" layoutY="718.0" styleClass="err_lbl" textFill="#0d0d0d" />
+   </children>
+</AnchorPane>

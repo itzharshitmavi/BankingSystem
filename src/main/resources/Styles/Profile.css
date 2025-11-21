@@ -1,0 +1,45 @@
+/* Container VBox */
+.vbox {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 20;
+}
+
+/* Field titles: Text nodes */
+.text {
+    -fx-font-family: "Calibri Light", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 1.3em;
+    -fx-fill: #888888;
+    -fx-padding: 5 0 2 0;
+}
+.text_up {
+    -fx-font-family: "Calibri Light", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 1.7em;
+    -fx-fill: #888888;
+    -fx-padding: 5 0 2 0;
+}
+
+/* Data values: Label nodes */
+.label {
+    -fx-font-weight: normal;
+    -fx-font-size: 1.25em;
+    -fx-text-fill: #222222;
+    -fx-padding: 0 0 8 0;
+    -fx-font-family: "Calibri Light";
+}
+
+/* Update Password button styling */
+.button {
+    -fx-background-color: linear-gradient(to right, #132A13, #253F25);
+    -fx-text-fill: white;
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 1.4em;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #0D1A0D, #1C2B1C);
+    -fx-cursor: hand;
+}

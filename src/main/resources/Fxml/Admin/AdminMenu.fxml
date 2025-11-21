@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="750.0" prefWidth="160.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maviharshit.bankingsystem.Controllers.Admin.AdminMenuController">
+   <children>
+      <AnchorPane prefHeight="730.0" prefWidth="160.0" styleClass="left_container">
+         <children>
+            <VBox prefHeight="80.0" prefWidth="160.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+             <children>
+                 <FontAwesomeIconView glyphName="BANK" size="35" text="" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bank" />
+             </children>
+             </VBox>
+            <VBox layoutX="30.0" layoutY="273.0" prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Button fx:id="create_client_btn" mnemonicParsing="false" text="Create Client">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="PLUS" size="20" />
+                      </graphic>
+                  </Button>
+                  <Button fx:id="clients_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Clients">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="LIST" size="20" />
+                      </graphic>
+                  </Button>
+                  <Button fx:id="deposit_btn" layoutX="10.0" layoutY="36.0" mnemonicParsing="false" text="Deposit">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="MONEY" size="20" />
+                      </graphic>
+                  </Button>
+                  <Button fx:id="logout_btn" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" styleClass="alt_menu_btn" text="Logout" onAction="#handleLogout">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="20" />
+                      </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

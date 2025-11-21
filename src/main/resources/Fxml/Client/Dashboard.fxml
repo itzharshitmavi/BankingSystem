@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="dashboard" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maviharshit.bankingsystem.Controllers.Client.DashboardController">
+   <children>
+      <Text fx:id="user_name" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hello, ABCD" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="login_date" styleClass="date_lbl" text="Today, 2025-11-15" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
+      <Text layoutX="811.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Account Summry" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="90.0" />
+      <Text layoutX="30.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="My Accounts" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
+      <HBox layoutX="20.0" layoutY="119.0" prefHeight="180.0" prefWidth="620.0" styleClass="account_view" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <AnchorPane prefHeight="150.0" prefWidth="295.0">
+               <children>
+                  <Label fx:id="checking_bal" layoutX="14.0" layoutY="22.0" styleClass="account_balance" text="₹3500.56" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
+                  <Label fx:id="checking_acc_nam" layoutX="24.0" layoutY="35.0" styleClass="account_number" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
+                  <VBox layoutX="195.0" layoutY="-10.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="14.0" />
+                   <FontAwesomeIconView glyphName="BANK" layoutX="237.0" layoutY="49.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
+                  <Text layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+
+               </children>
+               <styleClass>
+                  <String fx:value="account" />
+                  <String fx:value="account_gradient" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="295.0">
+               <children>
+                  <Label fx:id="saving_bal" layoutX="14.0" layoutY="22.0" styleClass="account_balance" text="₹3500.56" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
+                  <Label fx:id="Saving_acc_nam" layoutX="24.0" layoutY="35.0" styleClass="account_number" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
+                  <VBox layoutX="195.0" layoutY="-10.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="14.0" />
+                  <FontAwesomeIconView glyphName="BANK" layoutX="237.0" layoutY="49.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
+                  <Text layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving Account" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="account" />
+                  <String fx:value="account_gradient" />
+               </styleClass>
+            </AnchorPane>
+         </children></HBox>
+      <VBox layoutX="740.0" layoutY="120.0" prefHeight="180.0" prefWidth="210.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="acc_summary_container">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Income" />
+                  <Label fx:id="income_lbl" styleClass="income_amount" text="+ ₹4000.00" />
+                  <Line endX="160.0" />
+                  <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expenses" />
+                  <Label fx:id="expense_lbl" layoutX="10.0" layoutY="28.0" styleClass="expense_amount" text="- ₹1500.00" />
+               </children>
+            </VBox>
+         </children></VBox>
+      <Text layoutX="30.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Latest Transactions" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
+      <Text layoutX="745.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Send Money" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
+      <ListView fx:id="transaction_listview" layoutX="21.0" layoutY="375.0" prefHeight="363.0" prefWidth="570.0" styleClass="transaction_listview" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" />
+      <VBox layoutX="740.0" layoutY="365.0" prefHeight="366.0" prefWidth="240.0" styleClass="new_trans_container" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <children>
+            <Label layoutX="20.0" layoutY="43.0" text="Money Sending Acconut " />
+            <ChoiceBox fx:id="send_money_acc_type" prefHeight="30.0" prefWidth="224.0" value="Choose Account Type">
+               <effect>
+                  <Glow />
+               </effect></ChoiceBox>
+            <Label text="Payee Address" />
+            <TextField fx:id="payee_fld" />
+            <Label layoutX="20.0" layoutY="99.0" text="Acconut Number" />
+            <TextField fx:id="acc_num_fld" layoutX="20.0" layoutY="128.0" />
+            <Label layoutX="10.0" layoutY="10.0" text="Amount in ₹" />
+            <TextField fx:id="amount_fld" layoutX="10.0" layoutY="28.0" />
+            <Label layoutX="10.0" layoutY="53.0" text="Message (Optional)" />
+            <TextField fx:id="message_fld" layoutX="20.0" layoutY="176.0" />
+            <Button fx:id="send_money_btn" mnemonicParsing="false" text="Send Money" />
+            <Label fx:id="error_lbl" textFill="RED" />
+         </children></VBox>
+   </children>
+</AnchorPane>
