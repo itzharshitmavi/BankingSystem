@@ -2,18 +2,19 @@
 .vbox {
     -fx-background-color: #EEEEEE;
     -fx-padding: 20;
+    -fx-spacing: 8;
 }
 
 /* Field titles: Text nodes */
 .text {
     -fx-font-family: "Calibri Light", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    -fx-font-size: 1.3em;
+    -fx-font-size: 1.5em;
     -fx-fill: #888888;
     -fx-padding: 5 0 2 0;
 }
 .text_up {
     -fx-font-family: "Calibri Light", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    -fx-font-size: 1.7em;
+    -fx-font-size: 2em;
     -fx-fill: #888888;
     -fx-padding: 5 0 2 0;
 }
@@ -22,7 +23,7 @@
 .label {
     -fx-font-weight: normal;
     -fx-font-size: 1.25em;
-    -fx-text-fill: #222222;
+    -fx-text-fill: #000000;
     -fx-padding: 0 0 8 0;
     -fx-font-family: "Calibri Light";
 }

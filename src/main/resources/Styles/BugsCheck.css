@@ -1,0 +1,60 @@
+/* AnchorPane container */
+.anchor-pane {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 20;
+}
+
+/* VBox container */
+.vbox {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 3);
+}
+
+/* Title label */
+.label {
+    -fx-font-family: "Calibri Light", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.8em;
+    -fx-text-fill: #132A13;
+    -fx-padding: 0 0 12 0;
+}
+
+/* TableView styling */
+.table-view {
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 1.15em;
+    -fx-border-color: #DDDDDD;
+    -fx-border-width: 1;
+}
+
+/* TableColumn headers */
+.table-column-header {
+    -fx-background-color: #132A13;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 1.2em;
+}
+
+/* Table cells */
+.table-cell {
+    -fx-padding: 6 8;
+}
+
+/* Alternate row shading for readability */
+.table-row-cell:odd {
+    -fx-background-color: #F9F9F9;
+}
+
+/* Selected row highlight */
+.table-row-cell:focused, .table-row-cell:selected {
+    -fx-background-color: #C4E1C1;
+}
+
+/* ScrollBar styling (optional) */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}

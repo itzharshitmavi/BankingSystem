@@ -40,9 +40,6 @@
     <Text styleClass="text" text="Withdrawal Limit:" />
     <Label fx:id="withdrawalLimit_lbl" />
 
-    <Text styleClass="text" text="Last Login:" />
-    <Label fx:id="lastLogin_lbl" />
-
     <Button fx:id="updatePassword_btn" text="Update Password" />
     </VBox>
 

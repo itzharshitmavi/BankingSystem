@@ -412,5 +412,54 @@ public class DatabaseDriver {
         stmt.executeUpdate();
         stmt.close();
     }
+    public boolean validateClientPassword(String payeeAddress, String password) {
+        try {
+            ResultSet rs = getClientData(payeeAddress, password);
+            return (rs != null && rs.isBeforeFirst());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean updateClientPassword(String payeeAddress, String newPassword) {
+        try {
+            String sql = "UPDATE Clients SET Password=? WHERE PayeeAddress=?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, newPassword);
+            stmt.setString(2, payeeAddress);
+            int rows = stmt.executeUpdate();
+            stmt.close();
+            return rows > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public boolean insertBugReport(String payeeAddress, String description) {
+        try {
+            String sql = "INSERT INTO BugReports (payee_address, description) VALUES (?, ?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, payeeAddress);
+            stmt.setString(2, description);
+            int rows = stmt.executeUpdate();
+            stmt.close();
+            return rows > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public ResultSet getAllBugReports() {
+        try {
+            String sql = "SELECT * FROM BugReports ORDER BY id";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            return stmt.executeQuery();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 }

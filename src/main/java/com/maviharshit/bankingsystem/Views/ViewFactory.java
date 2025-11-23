@@ -18,11 +18,13 @@ public class ViewFactory {
     private AnchorPane transactionsView;
     private AnchorPane accountsView;
     private AnchorPane profileView;
+    private AnchorPane ReportView;
 
     private final ObjectProperty<AdminMenuOptions> adminSelectedMenuItem;
     private AnchorPane createClientView;
     private AnchorPane clientsView;
     private AnchorPane depositView;
+    private AnchorPane CheckView;
 
     public ViewFactory(){
         this.loginAccountType = AccountType.CLIENT;
@@ -43,6 +45,29 @@ public class ViewFactory {
         }
         return clientsView;
     }
+
+    public AnchorPane getReportView() {
+        if(ReportView == null){
+            try {
+                ReportView = new FXMLLoader(getClass().getResource("/FXML/Client/ReportBug.fxml")).load();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return ReportView;
+    }
+
+    public AnchorPane getCheckView() {
+        if(CheckView == null){
+            try {
+                CheckView = new FXMLLoader(getClass().getResource("/Fxml/Admin/BugsCheck.fxml")).load();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return CheckView;
+    }
+
     public void setLoginAccountType(AccountType loginAccountType) {
         this.loginAccountType = loginAccountType;
     }

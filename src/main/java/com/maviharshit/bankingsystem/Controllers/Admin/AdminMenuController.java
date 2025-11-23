@@ -28,6 +28,8 @@ public class AdminMenuController implements Initializable {
 
     @FXML
     public Button logout_btn;
+    @FXML
+    public Button report_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -37,6 +39,7 @@ public class AdminMenuController implements Initializable {
         create_client_btn.setOnAction(event -> onCreateClient());
         clients_btn.setOnAction(event -> onClients());
         deposit_btn.setOnAction(event -> onDeposit());
+        report_btn.setOnAction(event -> onCheckReport());
     }
     private void onCreateClient(){
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.CREATE_CLIENT);
@@ -46,6 +49,9 @@ public class AdminMenuController implements Initializable {
     }
     private void onDeposit(){
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.DEPOSIT);
+    }
+    private void onCheckReport(){
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.REPORT);
     }
     @FXML
     private void handleLogout(ActionEvent event) {

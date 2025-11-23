@@ -1,0 +1,78 @@
+/* Container AnchorPane */
+.anchor-pane {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 20;
+}
+
+/* VBox container inside AnchorPane */
+.anchor-pane > .vbox {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 2);
+}
+
+/* Title label */
+.label {
+    -fx-font-family: "Calibri Light", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.6em;
+    -fx-text-fill: #132A13;
+}
+
+/* Section labels text */
+.label {
+    -fx-font-size: 1.2em;
+    -fx-font-weight: normal;
+    -fx-text-fill: #555555;
+    -fx-padding: 4 0 4 0;
+}
+
+/* TextArea styling */
+.text-area {
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 1.15em;
+    -fx-border-color: #888888;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8;
+}
+
+/* TextField styling */
+.text-field {
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 1.15em;
+    -fx-border-color: #888888;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 8;
+}
+
+/* Buttons styling */
+.button {
+    -fx-background-color: linear-gradient(to right, #132A13, #253F25);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 2);
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.2em;
+    -fx-padding: 10 20;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-min-width: 120px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #0D1F0D, #1A3E1A);
+}
+
+/* Cancel button override */
+.button#cancel_btn {
+    -fx-background-color: #AAAAAA;
+    -fx-text-fill: #333333;
+}
+
+.button#cancel_btn:hover {
+    -fx-background-color: #888888;
+}

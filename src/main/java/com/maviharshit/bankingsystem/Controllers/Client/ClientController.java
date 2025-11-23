@@ -18,6 +18,7 @@ public class ClientController implements Initializable {
                 case TRANSACTIONS -> client_parent.setCenter(Model.getInstance().getViewFactory().getTransactionsView());
                 case ACCOUNTS -> client_parent.setCenter(Model.getInstance().getViewFactory().getAccountsView());
                 case PROFILE -> client_parent.setCenter(Model.getInstance().getViewFactory().getProfileView());
+                case REPORT -> client_parent.setCenter(Model.getInstance().getViewFactory().getReportView());
                 default -> client_parent.setCenter(Model.getInstance().getViewFactory().getDashboardView());
             }
         });
