@@ -26,6 +26,7 @@ public class ViewFactory {
     private AnchorPane depositView;
     private AnchorPane CheckView;
 
+
     public ViewFactory(){
         this.loginAccountType = AccountType.CLIENT;
         this.clientSelectedMenuItem = new SimpleObjectProperty<>();
@@ -79,7 +80,7 @@ public class ViewFactory {
         return adminSelectedMenuItem;
     }
 
-    public AnchorPane getDashboardView(){
+    public AnchorPane getDashboardView() {
         if(dashboardView == null){
             try{
                 dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Client/Dashboard.fxml")).load();

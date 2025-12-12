@@ -75,6 +75,7 @@ public class CreateClientController implements Initializable {
         this.databaseDriver = databaseDriver;
     }
     public CreateClientController(){
+        this.databaseDriver = new DatabaseDriver();
 
     }
 
